@@ -1,0 +1,14 @@
+RewriteEngine on
+DirectoryIndex index.php
+RewriteRule ^trang-chu$ index.php [L]
+RewriteRule ^dang-nhap$ ?act=login [L]
+RewriteRule ^dang-xuat$ ?act=logout [L]
+RewriteRule ^xu-ly-dang-nhap$ ?act=xulydangnhap [L]
+RewriteRule ^doi-mat-khau$ ?act=changepass [L]
+RewriteRule ^quen-mat-khau$ ?act=quenpass [L]
+RewriteRule ^gio-hang$ ?act=cartView [L]
+RewriteRule ^gio-hang/thanh-toan$ ?act=thanks [L]
+
+
+RewriteRule ^list/([A-Za-z-\s0-9]+)$ "index.php?act=list&id=$1"
+RewriteRule ^detail/(.*)$ "index.php?act=detail&id=$1"
